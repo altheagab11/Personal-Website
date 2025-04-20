@@ -19,32 +19,35 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     </head>
 
     <style>
-        /* nav-bar hover */
-        .nav-link {
-          transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-      
-        .nav-link:hover {
-          color: #e83e8c !important; /* bootstrap's pink */
-          transform: scale(1.05);
-        }
 
-        /* floating animation */
+        /* Navbar link styles */
+.nav-link {
+    color: white;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
 
-        .float-animate {
-    animation: floaty 3s ease-in-out infinite;
-  }
+.nav-link:hover {
+    color: #e83e8c !important; /* Bootstrap's pink */
+    transform: scale(1.05);
+}
 
-  @keyframes floaty {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-  }
+/* Active link glowing effect */
+.nav-link.active {
+    color: #fa3d8f !important;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(250, 61, 143, 0.8), 0 0 20px rgba(250, 61, 143, 0.6);
+    border-bottom: 2px solid #fa3d8f;
+    padding-bottom: 2px;
+}
 
+        
   /* SPARKLE PARTICLES (PINK) */
   .sparkle {
     position: fixed;
@@ -114,26 +117,22 @@
     100% { transform: translateX(120vw); }
   }
 
-  /* Glowing image effect */
-.glow-image {
-  border-radius: 50%;
-  border: 3px solid #fff0f5;
-  box-shadow:
-    0 0 10px rgba(255, 192, 203, 0.6),
-    0 0 20px rgba(255, 182, 193, 0.5),
-    0 0 30px rgba(255, 174, 201, 0.4);
-  transition: 0.4s ease-in-out;
+  /* Glowing effect */
+
+  .glow-image {
+  box-shadow: 0 0 30px rgba(250, 61, 143, 0.9), 
+              0 0 60px rgba(244, 143, 177, 0.7), 
+              0 0 90px rgba(255, 182, 193, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Extra glow on hover */
 .glow-image:hover {
-  box-shadow:
-    0 0 15px rgba(255, 192, 203, 0.9),
-    0 0 25px rgba(255, 182, 193, 0.7),
-    0 0 35px rgba(255, 174, 201, 0.6),
-    0 0 45px rgba(255, 160, 222, 0.5);
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 20, 147, 1), 
+              0 0 80px rgba(255, 182, 193, 0.9), 
+              0 0 100px rgba(255, 105, 180, 0.8);
 }
+
 
 @keyframes pulseGlow {
   0% {
@@ -157,46 +156,297 @@
   animation: pulseGlow 3s infinite ease-in-out;
 }
 
-  :root {
-  scroll-padding-top: 100px; /* Adjust this to your navbar height */
+  
+
+/* font gradient effect */
+
+#home h1{
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
 }
 
+
+@keyframes shimmer {
+  0% {
+    background-position: -500px;
+  }
+  100% {
+    background-position: 500px;
+  }
+}
+
+/* Glowing text effect */
+
+.name-highlight {
+  /* Keep the previous gradient text styles... */
+  text-shadow:
+    0 0 10px #ff66c4,
+    0 0 20px #ff66c4,
+    0 0 30px #ffaad4,
+    0 0 40px #ffe5f1;
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px #ff99cc;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff66c4, 0 0 30px #ffaad4;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff99cc;
+  }
+}
+
+.name-highlight {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.name-highlight {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #ff4ec4, #ff9a8b, #ffd6e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(255, 174, 224, 0.6);
+}
+
+/* avoid overlapping from the nav bar */
+
+.section-spacing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* smooth scrolling kinemerut */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* flip effect on education */
+
+.flip-card {
+                    background-color: transparent;
+                    width: 100%;
+                    height: 300px;
+                    perspective: 1000px; /* Enables 3D effect */
+                }
+            
+                .flip-card-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    transition: transform 0.8s; /* Smooth flip transition */
+                    transform-style: preserve-3d; /* Enables 3D child elements */
+                }
+            
+                .flip-card:hover .flip-card-inner {
+                    transform: rotateY(180deg); /* Flips the card */
+                }
+            
+                .flip-card-front,
+                .flip-card-back {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-backface-visibility: hidden; /* Hides the back side when not flipped */
+                    backface-visibility: hidden;
+                    border-radius: 1rem;
+                    box-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                }
+            
+                .flip-card-back {
+                    transform: rotateY(180deg); /* Positions the back side */
+                }
+            
+                .edu-title {
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                }
+            
+                .edu-desc {
+                    font-size: 1rem;
+                    margin-top: 10px;
+                }
+
+                /* cute social media icons hehe */
+
+                .social-icon i {
+    font-size: 2.5rem;
+    color: var(--icon-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(106, 27, 154, 0.5);
+  }
+
+  .social-icon:hover i {
+    transform: scale(1.3);
+    color: #ff66c4; /* Soft pink hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* shining buttons */
+
+  .sparkle-button {
+  background: linear-gradient(135deg, #ff4595, #e868ff, #42aaff);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);
+}
+
+.sparkle-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(156, 39, 176, 0.7);
+}
+
+.sparkle-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 20%, transparent 70%);
+  animation: sparkle 2s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+  /* General adjustments for smaller screens */
+  @media (max-width: 768px) {
+    /* Navbar */
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+    .nav-link {
+      font-size: 1rem;
+    }
+
+    /* Section Headings */
+    h1, h2 {
+      font-size: 2rem;
+    }
+
+    /* Skills Section */
+    #skills .list-group-item {
+      font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    #contact .form-label {
+      font-size: 0.9rem;
+    }
+    #contact .form-control {
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    /* Center align text for smaller screens */
+    .text-start {
+      text-align: center !important;
+    }
+
+    /* Adjust image sizes */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Reduce padding for sections */
+    .section-spacing {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    /* Adjust button sizes */
+    .btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+          
+              /* Accordion customization */
+              .accordion-button {
+                  background: linear-gradient(145deg, #ffe6fa, #e9ccff);
+                  border: none;
+                  box-shadow: 0 0 10px rgba(250, 61, 143, 0.5);
+                  transition: all 0.3s ease;
+              }
+          
+              .accordion-button:hover {
+                  transform: scale(1.02);
+                  box-shadow: 0 0 15px rgba(250, 61, 143, 0.7);
+              }
+          
+              .accordion-button:focus {
+                  box-shadow: 0 0 15px rgba(250, 61, 143, 0.8);
+              }
+          
+              .accordion-body {
+                  background: rgba(255, 255, 255, 0.9);
+                  border-radius: 10px;
+                  padding: 20px;
+                  box-shadow: 0 0 10px rgba(250, 61, 143, 0.5);
+              }
+
+              
+  
         </style>
 
-    <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0" style="margin:0; background-image:url(/image/penk.jpg); background-attachment:fixed; background-size:cover; background-position:center;">
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0" style="margin:0; background-image:url(/image/penk.jpg); background-attachment:fixed; background-size:cover; background-position:center;">
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg" style="
-          position: fixed;
-          top: 0;
-          width: 100%;
-          z-index: 999;
-          background-color: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        ">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html" style="color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> Theabels</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse" id="navbarNav" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(7, 7, 7, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  ">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="pweb.html" style="font-family: 'Pacifico', cursive; color: #fa3d8f; text-shadow: 2px 2px #fff; font-size: x-large;">Theabels</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="#home" class="nav-link fs-5" style="color: white;">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link fs-5" style="color: white;">About Me</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link fs-5" style="color: white;">Skills</a></li>
-                <li class="nav-item"><a href="#project" class="nav-link fs-5" style="color: white;">Project</a></li>
-                <li class="nav-item"><a href="#education" class="nav-link fs-5" style="color: white;">Education</a></li>
-                <li class="nav-item"><a href="#experience" class="nav-link fs-5" style="color: white;">Experience</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link fs-5" style="color: white;">Contact Me</a></li>
+                  <li class="nav-item"><a href="#home" class="nav-link fs-5">Home</a></li>
+                  <li class="nav-item"><a href="#about" class="nav-link fs-5">About Me</a></li>
+                  <li class="nav-item"><a href="#skills" class="nav-link fs-5">Skills</a></li>
+                  <li class="nav-item"><a href="#hobbies" class="nav-link fs-5">Hobbies</a></li>
+                  <li class="nav-item"><a href="#education" class="nav-link fs-5">Education</a></li>
+                  <li class="nav-item"><a href="#contact" class="nav-link fs-5">Contact Me</a></li>
               </ul>
-            </div>
           </div>
-        </nav>
+      </div>
+  </nav>
       
         <!-- Page content (scrollable) -->
         <div style="padding-top: 100px;">
@@ -211,31 +461,40 @@
 <!-- ☁️ Floating Clouds -->
 <div class="cloud" style="top: 10%; left: -150px;"></div>
 <div class="cloud" style="top: 50%; left: -300px;"></div>
-<div class="cloud" style="top: 80%; left: -100px;"></div>
+<div class="cloud" style="top: 80%; left: -50px;"></div>
 
-<section id="home" style="height: 100vh; font-family: 'Quicksand', sans-serif;">HOME</section>
+<!-- home section -->
 
-<section id="about" style="height: 100vh; font-family: 'Quicksand', sans-serif;">
+<section id="home" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
+  <div class="container text-center p-5 rounded-4 glowing-box text-dark mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+      <h1 class="display-5 fw-bold" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Hi, I'm Althea Gabrielle Reyes</h1>
+      <p class="col-md-8 mx-auto fs-4" style="color: #6a1b9a;">An Information Technology Student at the National University Lipa Campus</p>
+      <a class="btn btn-primary btn-lg sparkle-button" href="#project" role="button">View My Work</a>
+  </div>
+</section>
 
-    <!-- ABOUT ME -->
 
-    <div class="container p-5 rounded-4 glowing-box text-dark text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.7); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+<!-- ABOUT ME section -->
+
+<section id="about" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
+
+  <div class="container p-5 rounded-4 glowing-box text-dark text-center mt-5" style="max-width: 1000px; background-color:  rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
       <div class="container p-5">
   
         <div class="row align-items-center">
   
-          <div class="col-md-4 mb-4">
-            <img src="image/image.jpg" class="img-fluid rounded-circle border border-light border-2 glow-image" alt="Althea Gabrielle Reyes" style="border-color: #f48fb1;" />
+          <div class="col-md-6 mb-4 col-sm-12">
+            <img src="image/theabels.JPG" class="img-fluid rounded-circle border border-light border-2 glow-image" alt="Althea Gabrielle Reyes" style="border-color: #f48fb1;" />
           </div>
   
-          <div class="col-md-8 text-start">
+          <div class="col-md-6 text-start col-sm-12">
             <blockquote class="blockquote" style="font-size: 1.2rem; color: #6a1b9a;">
 
-                <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
-                    About Me
-                  </h2>
+              <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
+                About Me
+              </h2>
 
-              <h3 class="mt-3" style="font-weight: 700; color: #fa3d8f;text-align: center;">Althea Gabrielle Reyes</h3>
+              <h3 class="mt-3 name-highlight" style="font-weight: 700; color: #fa3d8f;text-align: center;">Althea Gabrielle Reyes</h3>
   
               <p class="my-4 fst-italic" style="text-align: center; color: #4a148c;">
                 🌸 Striving for excellence in every line of code. 🌸
@@ -254,83 +513,291 @@
   
   </section>
 
-          <section id="skills" style="height: 100vh;">
-            
+  <!-- skills section -->
+
+  <section id="skills" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
+    <div class="container p-5 rounded-4 glowing-box text-dark text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+        <div class="row align-items-center">
+            <!-- Skills List -->
+            <div class="col-md-6 col-sm-12">
+                <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Skills</h2>
+                <p class="lead" style="font-size: 1.5rem; color: #6a1b9a;">Here are some of the skills I have acquired:</p>
+                <ul class="list-group list-group-flush glow">
+                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
+                        <i class="fab fa-html5 me-3" style="font-size: 2rem; color: #e34c26;"></i>
+                        <div>
+                            <strong>HTML & CSS</strong>
+                            <p class="mb-0" style="font-size: 0.9rem;">Building the structure and styling of web pages with semantic HTML and modern CSS techniques.</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
+                        <i class="fab fa-js-square me-3" style="font-size: 2rem; color: #f7df1e;"></i>
+                        <div>
+                            <strong>JavaScript</strong>
+                            <p class="mb-0" style="font-size: 0.9rem;">Creating interactive and dynamic web experiences using modern JavaScript frameworks and libraries.</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
+                        <i class="fab fa-react me-3" style="font-size: 2rem; color: #61dafb;"></i>
+                        <div>
+                            <strong>React</strong>
+                            <p class="mb-0" style="font-size: 0.9rem;">Building reusable components and managing state for scalable front-end applications.</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
+                        <i class="fab fa-node-js me-3" style="font-size: 2rem; color: #68a063;"></i>
+                        <div>
+                            <strong>Node.js</strong>
+                            <p class="mb-0" style="font-size: 0.9rem;">Developing server-side applications and APIs using JavaScript runtime environment.</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
+                        <i class="fas fa-server me-3" style="font-size: 2rem; color: #6c757d;"></i>
+                        <div>
+                            <strong>Express</strong>
+                            <p class="mb-0" style="font-size: 0.9rem;">Creating RESTful APIs and managing server-side routing with Express.js.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Picture -->
+            <div class="col-md-6 text-center col-sm-12" style="padding-top: 20px;">
+                <img src="image/1.jpg" alt="Althea Gabrielle Reyes" class="iimg-fluid rounded-circle border border-light border-2 glow-image" style="max-width: 80%; border: 3px solid #f48fb1;">
+            </div>
+        </div>
+    </div>
+</section>
+
+          <!-- hobbies section -->
+
+                    <section id="hobbies" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
+              <div class="container p-5 rounded-4 glowing-box text-dark text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+                  <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">My Hobbies</h2>
+                  <p class="lead" style="font-size: 1.2rem; color: #6a1b9a;">Click on a hobby to explore more!</p>
+          
+                  <div class="accordion" id="hobbiesAccordion">
+                      <!-- Hobby 1 -->
+                      <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f;">
+                                  🎨 Digital Art
+                              </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#hobbiesAccordion">
+                              <div class="accordion-body" style="color: #6a1b9a;">
+                                  I love sketching cute characters and dreamy vibes! Here’s one of my favorite works:
+                                  <img src="image/penk.jpg" alt="Digital Art" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                              </div>
+                          </div>
+                      </div>
+          
+                      <!-- Hobby 2 -->
+                      <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f;">
+                                  📸 Photography 
+                              </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#hobbiesAccordion">
+                              <div class="accordion-body" style="color: #6a1b9a;">
+                                  Capturing magical moments with a hint of sparkle ✨. Here’s a photo I took recently:
+                                  <img src="image/IMG_6280.JPG" alt="Photography" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                              </div>
+                          </div>
+                      </div>
+          
+                      <!-- Hobby 3 -->
+                      <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f;">
+                                  🎧 Music Jams
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#hobbiesAccordion">
+                              <div class="accordion-body" style="color: #6a1b9a;">
+                                  K-pop? Lofi? Pop bops? Yes please! 🎶 Here’s my current playlist:
+                                  <ul class="mt-3">
+                                      <li>🎵 Song 1 - Artist</li>
+                                      <li>🎵 Song 2 - Artist</li>
+                                      <li>🎵 Song 3 - Artist</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Hobby 4 -->
+                      <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f;">
+                                  📚 Reading & Writing
+                              </button>
+                          </h2>
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#hobbiesAccordion">
+                              <div class="accordion-body" style="color: #6a1b9a;">
+                                  I adore getting lost in stories and writing my own! Here’s a book I’m currently reading:
+                                  <img src="image/IMG_6280.JPG" alt="Book" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                              </div>
+                          </div>
+
+                  </div>
+              </div>
           </section>
 
-          <section id="project" style="height: 100vh">
 
-            <!-- Project section -->
-    
-            <div class="container-fluid" id="project">
-                <div class="container p-5">
-                    <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">My Projects</h2>
-            
-                    <div class="row">
-                        <div class="col-md-4 my-3">
-                            <div class="card h-100 d-flex flex-column" style="box-shadow: 0 0 15px rgba(250, 61, 143, 0.6); border: 2px solid #f48fb1;">
-                                <img src="althea_reyes.png" alt="Althea Gabrielle Reyes" class="card-img-top" style="border-bottom: 2px solid #f48fb1;">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title" style="color: #fa3d8f; font-weight: 700;">Project 1</h5>
-                                    <p class="card-text flex-grow-1" style="color: #6a1b9a;">This is a brief description of Project 1. It showcases my skills in web development.</p>
-                                    <a href="#" class="btn btn-primary mt-auto" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 10px rgba(250, 61, 143, 0.6);">View Project</a>
+          <!-- education section -->
+
+          <section id="education" style="font-family: 'Quicksand', sans-serif; padding-top: 100px;" class=" section-spacing">
+
+                        <div class="container text-center">
+                <h2 class="mb-5" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ffffff; text-shadow: 2px 2px #6a1b9a;">🎓 Educational Background 🎓</h2>
+                <div class="row g-4">
+                    <!-- Elementary -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style="background: linear-gradient(145deg, #ffe6fa, #e9ccff); color: #6b007f;">
+                                    <div class="edu-title">Elementary</div>
+                                    <div class="edu-desc">Click to see details</div>
+                                </div>
+                                <div class="flip-card-back" style="background: linear-gradient(145deg, #ffd6e0, #ffb3c6); color: #4a004f;">
+                                    <div class="edu-title">Starlight Elementary</div>
+                                    <div class="edu-desc">2010 – 2016<br>With Honors</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 my-3">
-                            <div class="card h-100 d-flex flex-column" style="box-shadow: 0 0 15px rgba(250, 61, 143, 0.6); border: 2px solid #f48fb1;">
-                                <img src="althea_reyes.png" alt="Althea Gabrielle Reyes" class="card-img-top" style="border-bottom: 2px solid #f48fb1;">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title" style="color: #fa3d8f; font-weight: 700;">Project 2</h5>
-                                    <p class="card-text flex-grow-1" style="color: #6a1b9a;">This is a brief description of Project 2. It showcases my skills in web development.</p>
-                                    <a href="#" class="btn btn-primary mt-auto" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 10px rgba(250, 61, 143, 0.6);">View Project</a>
+                    </div>
+                    <!-- Junior High -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style="background: linear-gradient(145deg, #d9b3ff, #fcd5ff); color: #6b007f;">
+                                    <div class="edu-title">Junior High</div>
+                                    <div class="edu-desc">Click to see details</div>
+                                </div>
+                                <div class="flip-card-back" style="background: linear-gradient(145deg, #ffe6fa, #e9ccff); color: #4a004f;">
+                                    <div class="edu-title">Moonlight National HS</div>
+                                    <div class="edu-desc">2016 – 2020<br>With High Honors</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 my-3">
-                            <div class="card h-100 d-flex flex-column" style="box-shadow: 0 0 15px rgba(250, 61, 143, 0.6); border: 2px solid #f48fb1;">
-                                <img src="althea_reyes.png" alt="Althea Gabrielle Reyes" class="card-img-top" style="border-bottom: 2px solid #f48fb1;">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title" style="color: #fa3d8f; font-weight: 700;">Project 3</h5>
-                                    <p class="card-text flex-grow-1" style="color: #6a1b9a;">This is a brief description of Project 3. It showcases my skills in web development.</p>
-                                    <a href="#" class="btn btn-primary mt-auto" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 10px rgba(250, 61, 143, 0.6);">View Project</a>
+                    </div>
+                    <!-- Senior High -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style="background: linear-gradient(145deg, #ffd6e0, #ffb3c6); color: #6b007f;">
+                                    <div class="edu-title">Senior High</div>
+                                    <div class="edu-desc">Click to see details</div>
+                                </div>
+                                <div class="flip-card-back" style="background: linear-gradient(145deg, #d9b3ff, #fcd5ff); color: #4a004f;">
+                                    <div class="edu-title">Sunrise Science Academy</div>
+                                    <div class="edu-desc">2020 – 2022<br>STEM Strand</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            
           </section>
-          <section id="education" style="height: 100vh"></section>
-          <section id="experience" style="height: 100vh"></section>
-          <section id="contact" style="height: 100vh">
 
-            <!-- Contact me -->
+          <!-- Contact me -->
 
+          <section id="contact" class="py-5 section-spacing">
             <div class="container-fluid p-5" id="contact">
-                <div class="container p-5 rounded-4 glowing-box text-dark text-center mt-5" style="max-width: 800px; background-color: rgba(255, 255, 255, 0.7); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+                <div class="container p-5 rounded-4 glowing-box text-dark" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.7); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
                     <h2 class="text-center mb-4 mt-2" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Contact Me</h2>
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label" style="color: #6a1b9a; font-weight: 600;">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);">
+                    <div class="row">
+                        <!-- Contact Form -->
+                        <div class="col-md-8 col-sm-12">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label" style="color: #6a1b9a; font-weight: 600;">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label" style="color: #6a1b9a; font-weight: 600;">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label" style="color: #6a1b9a; font-weight: 600;">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter Your Message" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 sparkle-button" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">Send Message</button>
+                            </form>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label" style="color: #6a1b9a; font-weight: 600;">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);">
+                        <!-- Contact Info -->
+                        <div class="col-md-4 text-start col-sm-12">
+                            <h4 style="color: #fa3d8f; font-family: 'Pacifico', cursive;">Contact Information</h4>
+                            <p style="color: #6a1b9a; font-size: 1.1rem;">
+                                <i class="fas fa-phone-alt" style="color: #fa3d8f;"></i> 09958167775<br>
+                                <i class="fas fa-envelope" style="color: #fa3d8f;"></i> raltheagabrielle@gmail.com<br>
+                                <i class="fas fa-map-marker-alt" style="color: #fa3d8f;"></i> Lipa City, Batangas, Philippines
+                            </p>
+                            <h5 style="color: #fa3d8f; font-family: 'Pacifico', cursive;">Follow Me</h5>
+                            <div class="d-flex">
+                                <a href="https://github.com/altheagab11" target="_blank" class="mx-2 social-icon" style="--icon-color: #fa3d8f;">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/althea-gabrielle-reyes-0b5205361" target="_blank" class="mx-2 social-icon" style="--icon-color: #fa3d8f;">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.instagram.com/althea_gbrll/" target="_blank" class="mx-2 social-icon" style="--icon-color: #fa3d8f;">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label" style="color: #6a1b9a; font-weight: 600;">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter Your Message" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">Send Message</button>
-                    </form>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+          <!-- follow section -->
+
+          <section id="social-media" class="py-5 text-center">
+
+            <h2 style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ffffff; text-shadow: 2px 2px #6a1b9a;">
+              Follow Me on Social Media
+            </h2>
+            <p style="color: #fff; font-size: 1.2rem; text-shadow: 1px 1px #6a1b9a;">Let's connect and stay in touch!</p>
+          
+            <div class="d-flex justify-content-center mt-4">
+              <a href="https://github.com/altheagab11" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/althea-gabrielle-reyes-0b5205361" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.facebook.com/altheagabrielle1104.reyes" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/althea_gbrll/" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.tiktok.com/@abcdefgab__" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              
             </div>
           </section>
 
         </div>
+
+        <!-- footer -->
+
+        <footer style="
+  background: linear-gradient(90deg, #ff9ce3, #c59eff, #9ad0ff);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+">
+  <p style="margin: 0;">© 2025 Althea Gabrielle Reyes. All rights reserved.</p>
+  
+</footer>
+
+
 
         <script>
             document.addEventListener("mousemove", function (e) {
@@ -345,6 +812,7 @@
               }, 800);
             });
           </script>
+
 
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
