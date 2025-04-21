@@ -102,7 +102,7 @@
 
   /* ☁️ Floating Cloudy Decorations */
   .cloud {
-    position: absolute;
+    position: fixed;
     width: 100px;
     height: 60px;
     background: #fff8f8;
@@ -410,11 +410,13 @@ html {
                   box-shadow: 0 0 10px rgba(250, 61, 143, 0.5);
               }
 
-              
+              html, body {
+    position: relative;
+}
   
         </style>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0" style="margin:0; background-image:url(/image/penk.jpg); background-attachment:fixed; background-size:cover; background-position:center;">
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0" style="margin:0; background-image:url(image/penk.jpg); background-attachment:fixed; background-size:cover; background-position:center;">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg" style="
