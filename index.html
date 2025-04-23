@@ -378,10 +378,44 @@ html {
               html, body {
     position: relative;
 }
+
+/* loading screen */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
   
         </style>
 
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0" style="margin:0; background-image:url('./image/penk.jpg'); background-attachment:fixed; background-size:cover; background-position:center;">
+ 
+  <!-- Loading Screen -->
+<div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #ffe6fa, #fcd5ff); display: flex; justify-content: center; align-items: center; z-index: 9999; overflow: hidden;">
+<div style="text-align: center;">
+  <div class="spinner" style="width: 80px; height: 80px; border: 8px solid rgba(255, 255, 255, 0.3); border-top: 8px solid #fa3d8f; border-radius: 50%; animation: spin 1.5s linear infinite; margin: 0 auto;"></div>
+  <p style="font-family: 'Pacifico', cursive; font-size: 1.5rem; color: #fa3d8f; margin-top: 20px; text-shadow: 1px 1px 3px rgba(255, 105, 180, 0.6);">
+    Loading your sparkles ✨
+  </p>
+</div>
+</div>
+
+<!-- PINK SPARKLES -->
+<div class="sparkle" style="top: 80%; left: 10%; animation-delay: 0s;"></div>
+<div class="sparkle" style="top: 85%; left: 30%; animation-delay: 2s;"></div>
+<div class="sparkle" style="top: 90%; left: 50%; animation-delay: 4s;"></div>
+<div class="sparkle" style="top: 80%; left: 70%; animation-delay: 1s;"></div>
+<div class="sparkle" style="top: 88%; left: 90%; animation-delay: 3s;"></div>
+
+<!-- ☁️ Floating Clouds -->
+<div class="cloud" style="top: 10%; left: -150px;"></div>
+<div class="cloud" style="top: 50%; left: -300px;"></div>
+<div class="cloud" style="top: 80%; left: -50px;"></div>
+
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg" style="
@@ -417,23 +451,12 @@ html {
       
         <!-- Page content (scrollable) -->
         <div style="padding-top: 100px;">
-
-            <!-- PINK SPARKLES -->
-<div class="sparkle" style="top: 80%; left: 10%; animation-delay: 0s;"></div>
-<div class="sparkle" style="top: 85%; left: 30%; animation-delay: 2s;"></div>
-<div class="sparkle" style="top: 90%; left: 50%; animation-delay: 4s;"></div>
-<div class="sparkle" style="top: 80%; left: 70%; animation-delay: 1s;"></div>
-<div class="sparkle" style="top: 88%; left: 90%; animation-delay: 3s;"></div>
-
-<!-- ☁️ Floating Clouds -->
-<div class="cloud" style="top: 10%; left: -150px;"></div>
-<div class="cloud" style="top: 50%; left: -300px;"></div>
-<div class="cloud" style="top: 80%; left: -50px;"></div>
-
+            
 <!-- home section -->
 
 <section id="home" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
-  <div class="container text-center p-5 rounded-5 glowing-box text-dark mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+  <div class="container-fluid p-5">
+  <div class="container text-center p-5 rounded-5 glowing-box mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
 
     <h1 class="display-5 fw-bold pb-3" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
       Welcome, Sweetie!
@@ -450,16 +473,15 @@ html {
     <a class="btn btn-primary btn-lg sparkle-button mt-3" href="#about" role="button" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
       Let’s Get Into It 💫
     </a>
-
+  </div>
   </div>
 </section>
-
 
 <!-- ABOUT ME section -->
 
 <section id="about" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
-
-  <div class="container p-5 rounded-5 glowing-box text-dark text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+  <div class="container-fluid p-5">
+  <div class="container p-5 rounded-5 glowing-box text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
     <div class="container p-5">
 
       <div class="row align-items-center">
@@ -475,7 +497,7 @@ html {
               About Me
             </h2>
 
-            <p style="text-align: justify;">
+            <p style="text-align: center;">
               Hey, I’m Althea! 20, born on 11.11 (Scorpio alert ♏), matcha addict, and introvert with a flair for dramatic coding breakdowns.  
               Currently navigating the stormy seas of I.T. life — where I cry over bugs and contemplate my MedTech villain origin story 🧬💻  
               I overthink like it’s an Olympic sport, but I keep slaying anyway. If it’s not perfect, I don’t want it — classic Scorpio energy 😌✨  
@@ -488,20 +510,15 @@ html {
       </div>
     </div>
   </div>
+  </div>
 
 </section>
-
-
-
-
-
-
-
 
   <!-- skills section -->
 
   <section id="skills" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
-    <div class="container p-5 rounded-5 glowing-box text-dark text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+    <div class="container-fluid p-5">
+    <div class="container p-5 rounded-5 glowing-box text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
         <div class="row align-items-center">
             <!-- Skills List -->
             <div class="col-md-6 col-sm-12">
@@ -550,12 +567,14 @@ html {
                 <img src="image/1.jpg" alt="Althea Gabrielle Reyes" class="iimg-fluid rounded-circle border border-light border-2 glow-image" style="max-width: 80%; border: 3px solid #f48fb1;">
             </div>
         </div>
+      </div>
     </div>
 </section>
 
           <!-- hobbies section -->
 
           <section id="hobbies" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
+            <div class="container-fluid p-5">
             <div class="container p-5 rounded-5 glowing-box text-dark text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
               <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">My Hobbies</h2>
               <p class="lead" style="font-size: 1.2rem; color: #6a1b9a;">Click on a hobby to explore more!</p>
@@ -624,6 +643,7 @@ html {
                     </div>
                   </div>
                 </div>
+                
           
                 <!-- Hobby 5 -->
                 <div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
@@ -671,6 +691,8 @@ html {
                 </div>
               </div>
             </div>
+          </div>
+
           </section>
 
 
@@ -777,8 +799,8 @@ html {
           <!-- Contact me -->
 
           <section id="contact" class="py-5 section-spacing">
-            <div class="container-fluid p-5" id="contact">
-                <div class="container p-5 rounded-5 glowing-box text-dark" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+            <div class="container-fluid p-5">
+                <div class="container p-5 rounded-5 glowing-box " style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
                     <h2 class="text-center mb-4 mt-2" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Contact Me</h2>
                     <div class="row">
                         <!-- Contact Form -->
@@ -871,8 +893,6 @@ html {
   
 </footer>
 
-
-
         <script>
             document.addEventListener("mousemove", function (e) {
               const star = document.createElement("div");
@@ -887,6 +907,17 @@ html {
             });
           </script>
 
+<script>
+  // Hide the loading screen after 3 seconds
+  window.addEventListener('load', function () {
+    const loadingScreen = document.getElementById('loading-screen');
+    setTimeout(() => {
+      loadingScreen.style.opacity = '0';
+      loadingScreen.style.transition = 'opacity 0.5s ease';
+      setTimeout(() => loadingScreen.style.display = 'none', 500);
+    }, 3000);
+  });
+  </script>
 
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
