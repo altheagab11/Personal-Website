@@ -389,6 +389,25 @@ html {
     transform: rotate(360deg);
   }
 }
+
+/* Fun animations for skills */
+.skill-item {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .skill-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(250, 61, 143, 0.6), 0 0 30px rgba(244, 143, 177, 0.5);
+    }
+  
+    .skill-icon {
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+  
+    .skill-icon:hover {
+      transform: rotate(20deg);
+      color: #ff66c4; /* Fun pink hover effect */
+    }
   
         </style>
 
@@ -456,7 +475,7 @@ html {
 
 <section id="home" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
   <div class="container-fluid p-5">
-  <div class="container text-center p-5 rounded-5 glowing-box mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+  <div class="container text-center p-5 rounded-5 glowing-box mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
 
     <h1 class="display-5 fw-bold pb-3" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
       Welcome, Sweetie!
@@ -481,7 +500,7 @@ html {
 
 <section id="about" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
   <div class="container-fluid p-5">
-  <div class="container p-5 rounded-5 glowing-box text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+  <div class="container p-5 rounded-5 glowing-box text-center mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
     <div class="container p-5">
 
       <div class="row align-items-center">
@@ -493,11 +512,11 @@ html {
         <div class="col-md-6 text-start col-sm-12">
           <blockquote class="blockquote" style="font-size: 1.2rem; color: #6a1b9a;">
 
-            <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
+            <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 4rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
               About Me
             </h2>
 
-            <p style="text-align: center;">
+            <p style="text-align: center; font-size: larger;">
               Hey, I’m Althea! 20, born on 11.11 (Scorpio alert ♏), matcha addict, and introvert with a flair for dramatic coding breakdowns.  
               Currently navigating the stormy seas of I.T. life — where I cry over bugs and contemplate my MedTech villain origin story 🧬💻  
               I overthink like it’s an Olympic sport, but I keep slaying anyway. If it’s not perfect, I don’t want it — classic Scorpio energy 😌✨  
@@ -518,64 +537,64 @@ html {
 
   <section id="skills" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
     <div class="container-fluid p-5">
-    <div class="container p-5 rounded-5 glowing-box text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+      <div class="container p-5 rounded-5 glowing-box text-center mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
         <div class="row align-items-center">
-            <!-- Skills List -->
-            <div class="col-md-6 col-sm-12">
-                <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Skills</h2>
-                <p class="lead" style="font-size: 1.5rem; color: #6a1b9a;">Here are some of the skills I have acquired:</p>
-                <ul class="list-group list-group-flush glow">
-                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
-                        <i class="fab fa-html5 me-3" style="font-size: 2rem; color: #e34c26;"></i>
-                        <div>
-                            <strong>HTML & CSS</strong>
-                            <p class="mb-0" style="font-size: 0.9rem;">Building the structure and styling of web pages with semantic HTML and modern CSS techniques.</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
-                        <i class="fab fa-js-square me-3" style="font-size: 2rem; color: #f7df1e;"></i>
-                        <div>
-                            <strong>JavaScript</strong>
-                            <p class="mb-0" style="font-size: 0.9rem;">Creating interactive and dynamic web experiences using modern JavaScript frameworks and libraries.</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
-                        <i class="fab fa-react me-3" style="font-size: 2rem; color: #61dafb;"></i>
-                        <div>
-                            <strong>React</strong>
-                            <p class="mb-0" style="font-size: 0.9rem;">Building reusable components and managing state for scalable front-end applications.</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
-                        <i class="fab fa-node-js me-3" style="font-size: 2rem; color: #68a063;"></i>
-                        <div>
-                            <strong>Node.js</strong>
-                            <p class="mb-0" style="font-size: 0.9rem;">Developing server-side applications and APIs using JavaScript runtime environment.</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a;">
-                        <i class="fas fa-server me-3" style="font-size: 2rem; color: #6c757d;"></i>
-                        <div>
-                            <strong>Express</strong>
-                            <p class="mb-0" style="font-size: 0.9rem;">Creating RESTful APIs and managing server-side routing with Express.js.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- Picture -->
-            <div class="col-md-6 text-center col-sm-12" style="padding-top: 20px;">
-                <img src="image/1.jpg" alt="Althea Gabrielle Reyes" class="iimg-fluid rounded-circle border border-light border-2 glow-image" style="max-width: 80%; border: 3px solid #f48fb1;">
-            </div>
+          <!-- Skills List -->
+          <div class="col-md-6 col-sm-12">
+            <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 4rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Skills</h2>
+            <p class="lead" style="font-size: 1.5rem; color: #6a1b9a;">Here are some of the skills I have acquired:</p>
+            <ul class="list-group list-group-flush glow">
+              <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
+                <i class="fab fa-java me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div>
+                  <strong>Java</strong>
+                  <p class="mb-0" style="font-size: 0.9rem;">Object-oriented programming and building robust applications with Java.</p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
+                <i class="fas fa-code me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div>
+                  <strong>C++</strong>
+                  <p class="mb-0" style="font-size: 0.9rem;">Developing efficient and high-performance applications using C++.</p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
+                <i class="fab fa-php me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div>
+                  <strong>PHP</strong>
+                  <p class="mb-0" style="font-size: 0.9rem;">Creating dynamic and interactive web applications with PHP.</p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
+                <i class="fab fa-html5 me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div>
+                  <strong>HTML & CSS</strong>
+                  <p class="mb-0" style="font-size: 0.9rem;">Building the structure and styling of web pages with semantic HTML and modern CSS techniques.</p>
+                </div>
+              </li>
+              <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
+                <i class="fab fa-js-square me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div>
+                  <strong>JavaScript</strong>
+                  <p class="mb-0" style="font-size: 0.9rem;">Creating interactive and dynamic web experiences using JavaScript.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Picture -->
+          <div class="col-md-6 text-center col-sm-12" style="padding-top: 20px;">
+            <img src="image/1.jpg" alt="Althea Gabrielle Reyes" class="img-fluid rounded-circle border border-light border-2 glow-image" style="max-width: 80%; border: 3px solid #f48fb1;">
+          </div>
         </div>
       </div>
     </div>
-</section>
+  </section>
 
           <!-- hobbies section -->
 
           <section id="hobbies" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
             <div class="container-fluid p-5">
-            <div class="container p-5 rounded-5 glowing-box text-dark text-center mt-5" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+            <div class="container p-5 rounded-5 glowing-box text-dark text-center mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
               <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">My Hobbies</h2>
               <p class="lead" style="font-size: 1.2rem; color: #6a1b9a;">Click on a hobby to explore more!</p>
           
@@ -605,7 +624,7 @@ html {
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#hobbiesAccordion">
                     <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
                       I enjoy playing online games and exploring new virtual worlds. My favorite games include RPGs and strategy games.
-                      <img src="image/photo.jfif" alt="Photography" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                      <img src="image/game.jfif" alt="Roblox" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
                     </div>
                   </div>
                 </div>
@@ -619,8 +638,8 @@ html {
                   </h2>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#hobbiesAccordion">
                     <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
-                      I love binge-watching K-Dramas with heartwarming stories and amazing characters. My current favorite is <em>Crash Landing on You</em>.
-                      <img src="image/photo.jfif" alt="Photography" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                      I love binge-watching K-Dramas with heartwarming stories and amazing characters. My current favorite is <em>Love Next Door</em>.
+                      <img src="image/kdrama.jpg" alt="Watching" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
                     </div>
                   </div>
                 </div>
@@ -655,7 +674,7 @@ html {
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#hobbiesAccordion">
                     <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
                       Dancing is my way of expressing myself and staying active. I enjoy learning new choreography and grooving to my favorite songs.
-                      <img src="image/photo.jfif" alt="Photography" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                      <img src="image/dancing.jpg" alt="Dancing" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
                     </div>
                   </div>
                 </div>
@@ -670,7 +689,7 @@ html {
                   <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#hobbiesAccordion">
                     <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
                       Nothing beats a good nap or a long night of restful sleep. It’s my ultimate way to recharge and relax.
-                      <img src="image/photo.jfif" alt="Photography" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                      <img src="image/sleeping.jpg" alt="Sleeping" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
                     </div>
                   </div>
                 </div>
@@ -685,7 +704,7 @@ html {
                   <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#hobbiesAccordion">
                     <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
                       I enjoy experimenting in the kitchen and trying out new recipes. Cooking is both a creative outlet and a way to share love through food.
-                      <img src="image/photo.jfif" alt="Photography" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                      <img src="image/cooking.jpg" alt="Cooking" class="img-fluid rounded mt-3" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
                     </div>
                   </div>
                 </div>
@@ -707,7 +726,7 @@ html {
                   <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front" style="background: linear-gradient(145deg, #ffe6fa, #ffb3c6); color: #6b007f;">
-                        <img src="image/daycare.jpg" alt="Day Care" class="img-fluid rounded mt-3" style="max-width: 80%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                        <i class="fas fa-child" style="font-size: 4rem; color: #fa3d8f; text-shadow: 0 0 15px rgba(250, 61, 143, 0.6);"></i>
                         <div class="edu-title mt-3">Day Care</div>
                       </div>
                       <div class="flip-card-back" style="background: linear-gradient(145deg, #ffd6e0, #ffb3c6); color: #4a004f;">
@@ -722,7 +741,7 @@ html {
                   <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front" style="background: linear-gradient(145deg, #d9b3ff, #fcd5ff); color: #6b007f;">
-                        <img src="image/kindergarten.jpg" alt="Kindergarten" class="img-fluid rounded mt-3" style="max-width: 80%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                        <i class="fas fa-pencil-alt" style="font-size: 4rem; color: #fa3d8f; text-shadow: 0 0 15px rgba(250, 61, 143, 0.6);"></i>
                         <div class="edu-title mt-3">Kindergarten</div>
                       </div>
                       <div class="flip-card-back" style="background: linear-gradient(145deg, #ffe6fa, #e9ccff); color: #4a004f;">
@@ -737,7 +756,7 @@ html {
                   <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front" style="background: linear-gradient(145deg, #ffe6fa, #e9ccff); color: #6b007f;">
-                        <img src="image/elementary.jpg" alt="Elementary" class="img-fluid rounded mt-3" style="max-width: 80%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                        <i class="fas fa-book" style="font-size: 4rem; color: #fa3d8f; text-shadow: 0 0 15px rgba(250, 61, 143, 0.6);"></i>
                         <div class="edu-title mt-3">Elementary</div>
                       </div>
                       <div class="flip-card-back" style="background: linear-gradient(145deg, #ffd6e0, #ffb3c6); color: #4a004f;">
@@ -752,11 +771,11 @@ html {
                   <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front" style="background: linear-gradient(145deg, #d9b3ff, #fcd5ff); color: #6b007f;">
-                        <img src="image/juniorhigh.jpg" alt="Junior High" class="img-fluid rounded mt-3" style="max-width: 80%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                        <i class="fas fa-graduation-cap" style="font-size: 4rem; color: #fa3d8f; text-shadow: 0 0 15px rgba(250, 61, 143, 0.6);"></i>
                         <div class="edu-title mt-3">Junior High</div>
                       </div>
                       <div class="flip-card-back" style="background: linear-gradient(145deg, #ffe6fa, #e9ccff); color: #4a004f;">
-                        <div class="edu-title">The Mabinin Academy</div>
+                        <div class="edu-title">The Mabini Academy</div>
                         <div class="edu-desc">2017 – 2021<br>With High Honors</div>
                       </div>
                     </div>
@@ -767,7 +786,7 @@ html {
                   <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front" style="background: linear-gradient(145deg, #ffd6e0, #ffb3c6); color: #6b007f;">
-                        <img src="image/seniorhigh.jpg" alt="Senior High" class="img-fluid rounded mt-3" style="max-width: 80%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                        <i class="fas fa-laptop-code" style="font-size: 4rem; color: #fa3d8f; text-shadow: 0 0 15px rgba(250, 61, 143, 0.6);"></i>
                         <div class="edu-title mt-3">Senior High</div>
                       </div>
                       <div class="flip-card-back" style="background: linear-gradient(145deg, #d9b3ff, #fcd5ff); color: #4a004f;">
@@ -782,7 +801,7 @@ html {
                   <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front" style="background: linear-gradient(145deg, #ffe6fa, #ffb3c6); color: #6b007f;">
-                        <img src="image/college.jpg" alt="College" class="img-fluid rounded mt-3" style="max-width: 80%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+                        <i class="fas fa-university" style="font-size: 4rem; color: #fa3d8f; text-shadow: 0 0 15px rgba(250, 61, 143, 0.6);"></i>
                         <div class="edu-title mt-3">College</div>
                       </div>
                       <div class="flip-card-back" style="background: linear-gradient(145deg, #ffd6e0, #e9ccff); color: #4a004f;">
@@ -795,57 +814,6 @@ html {
               </div>
             </div>
           </section>
-
-          <!-- Contact me -->
-
-          <section id="contact" class="py-5 section-spacing">
-            <div class="container-fluid p-5">
-                <div class="container p-5 rounded-5 glowing-box " style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
-                    <h2 class="text-center mb-4 mt-2" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Contact Me</h2>
-                    <div class="row">
-                        <!-- Contact Form -->
-                        <div class="col-md-8 col-sm-12">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label" style="color: #6a1b9a; font-weight: 600;">Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label" style="color: #6a1b9a; font-weight: 600;">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label" style="color: #6a1b9a; font-weight: 600;">Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter Your Message" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100 sparkle-button" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">Send Message</button>
-                            </form>
-                        </div>
-                        <!-- Contact Info -->
-                        <div class="col-md-4 text-start col-sm-12">
-                            <h4 style="color: #fa3d8f; font-family: 'Pacifico', cursive; text-shadow: 2px 2px #fff;">Contact Information</h4>
-                            <p style="color: #6a1b9a; font-size: 1.1rem;">
-                                <i class="fas fa-phone-alt" style="color: #fa3d8f;"></i> 09958167775 & 09622360874<br>
-                                <i class="fas fa-envelope" style="color: #fa3d8f;"></i> raltheagabrielle@gmail.com<br>
-                                <i class="fas fa-map-marker-alt" style="color: #fa3d8f;"></i> Lipa City, Batangas, Philippines
-                            </p>
-                            <h5 style="color: #fa3d8f; font-family: 'Pacifico', cursive; text-shadow: 2px 2px #fff;">Follow Me</h5>
-                            <div class="d-flex">
-                                <a href="https://github.com/altheagab11" target="_blank" class="mx-2 social-icon" style="--icon-color: #fa3d8f;">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/althea-gabrielle-reyes-0b5205361" target="_blank" class="mx-2 social-icon" style="--icon-color: #fa3d8f;">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://www.instagram.com/althea_gbrll/" target="_blank" class="mx-2 social-icon" style="--icon-color: #fa3d8f;">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
           <!-- follow section -->
 
