@@ -17,6 +17,8 @@
             crossorigin="anonymous"
         />
 
+
+
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
@@ -159,7 +161,7 @@
 
 #home h1{
   background: linear-gradient(90deg, #ff6ec4, #7873f5);
-  -webkit-background-clip: text;
+  background-clip: text; /* Standard property for compatibility */
   -webkit-text-fill-color: transparent;
   animation: shimmer 3s infinite linear;
 }
@@ -418,7 +420,7 @@ html {
     object-fit: cover; /* Maintain aspect ratio and crop if necessary */
     box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);
   }
-  
+
         </style>
 
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0" style="margin:0; background-image:url('./image/penk.jpg'); background-attachment:fixed; background-size:cover; background-position:center;">
@@ -480,29 +482,34 @@ html {
       
         <!-- Page content (scrollable) -->
         <div style="padding-top: 100px;">
-            
+
 <!-- home section -->
 
 <section id="home" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
   <div class="container-fluid p-5">
-  <div class="container text-center p-5 rounded-5 glowing-box mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
-
-    <h1 class="display-5 fw-bold pb-3" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
-      Welcome, Sweetie!
-    </h1>
-
-        <p class="col-md-8 mx-auto fs-4" style="color: #630d99;">
-      I’m <span style="background: linear-gradient(90deg, #ff46b5, #554fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">Althea Gabrielle Reyes</span> — matcha enthusiast, certified code crybaby, and your local Scorpio techie with a flair for the dramatic 💅🦂
-    </p>
-
-    <p class="col-md-8 mx-auto fs-5" style="color: #7b1fa2;">
-      This is my little digital corner where I slay bugs (sometimes), chase deadlines (always), and sprinkle a little sparkle in between ✨ So grab a cup of matcha and enjoy the chaos!
-    </p>
-
-    <a class="btn btn-primary btn-lg sparkle-button mt-3" href="#about" role="button" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
-      Let’s Get Into It 💫
-    </a>
-  </div>
+    <div class="container p-5 rounded-5 glowing-box mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+      <div class="row align-items-center">
+        <!-- Text Content -->
+        <div class="col-md-6 col-sm-12 text-center text-md-start">
+          <h1 class="display-5 fw-bold pb-3" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
+            Welcome, Sweetie!
+          </h1>
+          <p class="fs-4" style="color: #630d99;">
+            I’m <span style="background: linear-gradient(90deg, #ff46b5, #554fff); background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">Althea Gabrielle Reyes</span> — matcha enthusiast, certified code crybaby, and your local Scorpio techie with a flair for the dramatic 💅🦂
+          </p>
+          <p class="fs-5" style="color: #7b1fa2;">
+            This is my little digital corner where I slay bugs (sometimes), chase deadlines (always), and sprinkle a little sparkle in between ✨ So grab a cup of matcha and enjoy the chaos!
+          </p>
+          <a class="btn btn-primary btn-lg sparkle-button mt-3" href="#about" role="button" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6); margin-bottom: 30px;">
+            Let’s Get Into It 💫
+          </a>
+        </div>
+        <!-- Picture -->
+        <div class="col-md-6 col-sm-12 text-center">
+          <img src="image/theabels.JPG" alt="Althea Gabrielle Reyes" class="img-fluid rounded-circle border border-light border-2 glow-image" style="max-width: 100%; border: 2px solid #f48fb1;">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -510,23 +517,22 @@ html {
 
 <section id="about" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
   <div class="container-fluid p-5">
-  <div class="container rounded-5 glowing-box text-center mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
-    <div class="container p-5">
+  <div class="container p-5 rounded-5 glowing-box text-center mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
 
       <div class="row align-items-center">
 
-        <div class="col-md-6 mb-4 col-sm-12">
-          <img src="image/theabels.JPG" class="img-fluid rounded-circle border border-light border-2 glow-image" alt="Althea Gabrielle Reyes" style="border-color: #f48fb1;" />
+        <div class="col-md-6 text-center col-sm-12">
+          <img src="image/1.jpg" class="img-fluid rounded-circle border border-light border-2 glow-image" alt="Althea Gabrielle Reyes" style="border-color: #f48fb1;" />
         </div>
 
         <div class="col-md-6 text-start col-sm-12">
           <blockquote class="blockquote" style="font-size: 1.2rem; color: #6a1b9a;">
 
-            <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 4rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
+            <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
               About Me
             </h2>
 
-            <p style="text-align: center; font-size: larger;">
+            <p class="fs-4" style="text-align: center;">
               Hey, I’m Althea! 20, born on 11.11 (Scorpio alert ♏), matcha addict, and introvert with a flair for dramatic coding breakdowns.  
               Currently navigating the stormy seas of I.T. life — where I cry over bugs and contemplate my MedTech villain origin story 🧬💻  
               I overthink like it’s an Olympic sport, but I keep slaying anyway. If it’s not perfect, I don’t want it — classic Scorpio energy 😌✨  
@@ -537,7 +543,6 @@ html {
         </div>
 
       </div>
-    </div>
   </div>
   </div>
 
@@ -549,51 +554,53 @@ html {
     <div class="container-fluid p-5">
       <div class="container p-5 rounded-5 glowing-box text-center mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
         <div class="row align-items-center">
-          <!-- Skills List -->
-          <div class="col-md-6 col-sm-12">
-            <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 4rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Skills</h2>
+          <div class="col-md-12 col-sm-12">
+            <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Skills</h2>
             <p class="lead" style="font-size: 1.5rem; color: #6a1b9a;">Here are some of the skills I’ve mastered (or at least tried to):</p>
             <ul class="list-group list-group-flush glow">
+              
+              <!-- SKILL ITEM TEMPLATE -->
               <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
-                <i class="fab fa-java me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
-                <div>
+                <i class="fab fa-java me-4 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div class="flex-grow-1 text-center">
                   <strong>Java</strong>
-                  <p class="mb-0" style="font-size: 0.9rem;">Writing code that works... most of the time. Debugging? That’s my cardio. 🏋️‍♀️ (Also, who needs sleep when you have `NullPointerException`?)</p>
+                  <p class="mb-0" style="font-size: 0.9rem;">Writing code that works... most of the time. Debugging? That’s my cardio. 🏋️‍♀️ (Also, who needs sleep when you have <code>NullPointerException</code>?)</p>
                 </div>
               </li>
+  
               <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
-                <i class="fas fa-code me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
-                <div>
+                <i class="fas fa-code me-4 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div class="flex-grow-1 text-center">
                   <strong>C++</strong>
                   <p class="mb-0" style="font-size: 0.9rem;">Turning coffee into code and occasionally into compiler errors. ☕ (Pro tip: If it compiles, it’s a miracle. If it runs, it’s magic.)</p>
                 </div>
               </li>
+  
               <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
-                <i class="fab fa-php me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
-                <div>
+                <i class="fab fa-php me-4 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div class="flex-grow-1 text-center">
                   <strong>PHP</strong>
                   <p class="mb-0" style="font-size: 0.9rem;">Making websites dynamic and occasionally breaking them. 💻 (PHP: Pretty Hard to Predict... but it works, eventually.)</p>
                 </div>
               </li>
+  
               <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
-                <i class="fab fa-html5 me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
-                <div>
+                <i class="fab fa-html5 me-4 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div class="flex-grow-1 text-center">
                   <strong>HTML & CSS</strong>
                   <p class="mb-0" style="font-size: 0.9rem;">Crafting pixel-perfect designs and fighting with CSS until it listens. 🎨 (CSS: Where one missing semicolon can ruin your entire day.)</p>
                 </div>
               </li>
+  
               <li class="list-group-item d-flex align-items-center skill-item" style="background-color: rgba(255, 255, 255, 0.5); color: #6a1b9a; border-radius: 15px; margin-bottom: 10px;">
-                <i class="fab fa-js-square me-3 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
-                <div>
+                <i class="fab fa-js-square me-4 skill-icon" style="font-size: 2rem; color: #fa3d8f;"></i>
+                <div class="flex-grow-1 text-center">
                   <strong>JavaScript</strong>
                   <p class="mb-0" style="font-size: 0.9rem;">Making websites come alive with animations, and sometimes breaking them in the process. ✨ (JavaScript: Where everything is undefined, including my sanity.)</p>
                 </div>
               </li>
+  
             </ul>
-          </div>
-          <!-- Picture -->
-          <div class="col-md-6 text-center col-sm-12" style="padding-top: 20px;">
-            <img src="image/1.jpg" alt="Althea Gabrielle Reyes" class="img-fluid rounded-circle border border-light border-2 glow-image" style="max-width: 80%; border: 3px solid #f48fb1;">
           </div>
         </div>
       </div>
@@ -604,131 +611,113 @@ html {
 
           <section id="hobbies" style="font-family: 'Quicksand', sans-serif;" class="py-5 section-spacing">
             <div class="container-fluid p-5">
-            <div class="container p-5 rounded-5 glowing-box text-dark text-center mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
-              <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">My Hobbies</h2>
-              <p class="lead" style="font-size: 1.2rem; color: #6a1b9a;">Click on a hobby to explore more!</p>
+              <div class="container p-5 rounded-5 glowing-box text-dark text-center mt-5" style="max-width: 100%; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
+                <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">My Hobbies</h2>
+                <p class="lead" style="font-size: 1.2rem; color: #6a1b9a;">Click on a hobby to explore more!</p>
           
-              <div class="accordion" id="hobbiesAccordion">
-                <!-- Hobby 1 -->
-                <div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
-                      📸 Photography
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#hobbiesAccordion">
-                    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
-                      Capturing magical moments with a hint of sparkle ✨. Here’s a photo I took recently:
-                      <img src="image/photo.jfif" alt="Photography" class="img-fluid rounded mt-3 hobby-image" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
-                    </div>
-                  </div>
-                </div>
+                <div class="accordion" id="hobbiesAccordion">
+
+<!-- Hobby 1 -->
+<div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
+      📸 Photography
+    </button>
+  </h2>
+  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#hobbiesAccordion">
+    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
+      Capturing magical moments with a hint of sparkle ✨. Photography allows me to freeze time and preserve memories forever.
+      <img src="image/photo.jfif" alt="Photography" class="img-fluid rounded mt-3 hobby-image" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+      <p class="mt-3" style="font-size: 1rem;">✨ Fun Fact: I love experimenting with light and shadows to create dreamy effects!</p>
+    </div>
+  </div>
+</div>
           
-                <!-- Hobby 2 -->
-                <div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
-                      🎮 Playing Games
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#hobbiesAccordion">
-                    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
-                      I enjoy playing online games and exploring new virtual worlds. My favorite games include RPGs and strategy games.
-                      <img src="image/game.jfif" alt="Roblox" class="img-fluid rounded mt-3 hobby-image" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
-                    </div>
-                  </div>
-                </div>
+<!-- Hobby 2 -->
+<div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
+  <h2 class="accordion-header" id="headingTwo">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
+      🎮 Playing Games
+    </button>
+  </h2>
+  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#hobbiesAccordion">
+    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
+      I enjoy playing online games and exploring new virtual worlds. My favorite games include RPGs and strategy games.
+      <video controls class="mt-3 hobby-image" style="border-radius: 15px; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+        <source src="video/roblox.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="mt-3" style="font-size: 1rem;">🎮 Fun Fact: I once stayed up all night to finish a game quest. Totally worth it!</p>
+    </div>
+  </div>
+</div>
           
-                <!-- Hobby 3 -->
-                <div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
-                      🎥 Watching K-Dramas
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#hobbiesAccordion">
-                    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
-                      I love binge-watching K-Dramas with heartwarming stories and amazing characters. My current favorite is <em>Love Next Door</em>.
-                      <img src="image/kdrama.jpg" alt="Watching" class="img-fluid rounded mt-3 hobby-image" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
-                    </div>
-                  </div>
-                </div>
+<!-- Hobby 3 -->
+<div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
+  <h2 class="accordion-header" id="headingThree">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
+      🎥 Watching K-Dramas
+    </button>
+  </h2>
+  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#hobbiesAccordion">
+    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
+      I love binge-watching K-Dramas with heartwarming stories and amazing characters. My current favorite is <em>Love Next Door</em>.
+      <video controls class="mt-3 hobby-image" style="border-radius: 15px; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+        <source src="video/kdrama.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="mt-3" style="font-size: 1rem;">🎥 Fun Fact: I’ve rewatched my favorite K-Drama <em>Love Next Door</em> three times!</p>
+    </div>
+  </div>
+</div>
           
-                <!-- Hobby 4 -->
-                <div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
-                      🎧 Music Jam
-                    </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#hobbiesAccordion">
-                    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
-                      K-pop? Lofi? Pop bops? Yes please! 🎶 Here’s my current playlist:
-                      <ul class="mt-3">
-                        <li>🎵 Song 1 - Artist</li>
-                        <li>🎵 Song 2 - Artist</li>
-                        <li>🎵 Song 3 - Artist</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-          
-                <!-- Hobby 5 -->
-                <div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
-                      💃 Dancing
-                    </button>
-                  </h2>
-                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#hobbiesAccordion">
-                    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
-                      Dancing is my way of expressing myself and staying active. I enjoy learning new choreography and grooving to my favorite songs.
-                      <img src="image/dancing.jpg" alt="Dancing" class="img-fluid rounded mt-3 hobby-image" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
-                    </div>
-                  </div>
-                </div>
-          
-                <!-- Hobby 6 -->
-                <div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
-                  <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
-                      😴 Sleeping
-                    </button>
-                  </h2>
-                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#hobbiesAccordion">
-                    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
-                      Nothing beats a good nap or a long night of restful sleep. It’s my ultimate way to recharge and relax.
-                      <img src="image/sleeping.jpg" alt="Sleeping" class="img-fluid rounded mt-3 hobby-image" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
-                    </div>
-                  </div>
-                </div>
-          
-                <!-- Hobby 7 -->
-                <div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
-                  <h2 class="accordion-header" id="headingSeven">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
-                      🍳 Cooking
-                    </button>
-                  </h2>
-                  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#hobbiesAccordion">
-                    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
-                      I enjoy experimenting in the kitchen and trying out new recipes. Cooking is both a creative outlet and a way to share love through food.
-                      <img src="image/cooking.jpg" alt="Cooking" class="img-fluid rounded mt-3 hobby-image" style="max-width: 100%; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
-                    </div>
-                  </div>
+<!-- Hobby 4 -->
+<div class="accordion-item" style="border-radius: 15px; overflow: hidden; margin-bottom: 10px;">
+  <h2 class="accordion-header" id="headingFour">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="font-size: 1.2rem; font-weight: bold; color: #fa3d8f; background: linear-gradient(145deg, #ffe6fa, #fcd5ff); border: none; border-radius: 15px;">
+      🎧 Music Jam
+    </button>
+  </h2>
+  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#hobbiesAccordion">
+    <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
+      Here’s my current R&B playlist:
+      <ul class="mt-3">
+        <li>
+          🎵 You - Lloyd, Lil Wayne
+          <audio controls class="audio-player" style="width: 100%; margin-top: 10px;">
+            <source src="audio/you.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+        <li>
+          🎵 Break from Toronto - PARTYNEXTDOOR
+          <audio controls class="audio-player" style="width: 100%; margin-top: 10px;">
+            <source src="audio/break_from_toronto.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+        <li>
+          🎵 All The Stars - Kendrick Lamar, SZA
+          <audio controls class="audio-player" style="width: 100%; margin-top: 10px;">
+            <source src="audio/all_the_stars.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+      </ul>
+      <p class="mt-3" style="font-size: 1rem;">🎧 Fun Fact: R&B music helps me relax and stay inspired throughout the day!</p>
+    </div>
+  </div>
+</div>
                 </div>
               </div>
             </div>
-          </div>
-
           </section>
-
 
           <!-- education section -->
 
           <section id="education" style="font-family: 'Quicksand', sans-serif; padding-top: 100px;" class="section-spacing">
             <div class="container text-center">
-              <h2 class="mb-5" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ffffff; text-shadow: 2px 2px #6a1b9a;">🎓 Educational Background 🎓</h2>
+              <h2 class="mb-5" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #ffffff; text-shadow: 2px 2px #6a1b9a;">🎓 Educational Background 🎓</h2>
               <div class="row g-4">
                 <!-- Day Care -->
                 <div class="col-md-4 col-sm-12">
@@ -835,7 +824,7 @@ html {
 <section id="contact" class="py-5 section-spacing">
   <div class="container-fluid p-5">
     <div class="container p-5 rounded-5 glowing-box" style="max-width: 1000px; background-color: rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px #f48fb1; border: 2px solid #f06292;">
-      <h2 class="text-center mb-4 mt-2" style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Contact Me</h2>
+      <h2 class="text-center mb-4 mt-2" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">Contact Me</h2>
       <div class="row">
         <!-- Contact Form -->
         <div class="col-md-8 col-sm-12">
@@ -852,26 +841,18 @@ html {
               <label for="message" class="form-label" style="color: #6a1b9a; font-weight: 600;">Message</label>
               <textarea class="form-control rounded-5" id="message" name="message" rows="3" placeholder="Enter Your Message" required style="border: 2px solid #f48fb1; box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary w-100 sparkle-button" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">Send Message</button>
+            <button type="submit" class="btn btn-primary w-100 sparkle-button" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6); margin-bottom: 30px;">Send Message</button>
           </form>
         </div>
         <!-- Contact Info -->
         <div class="col-md-4 text-start col-sm-12">
           <h4 style="color: #fa3d8f; font-family: 'Pacifico', cursive; text-shadow: 2px 2px #fff;">Contact Information</h4>
           <p style="color: #6a1b9a; font-size: 1.1rem;">
-            <i class="fas fa-phone-alt" style="color: #fa3d8f;"></i> 09958167775 & 09622360874<br>
+            <i class="fas fa-phone-alt" style="color: #fa3d8f;"></i> 09958167775<br>
+            <i class="fas fa-phone-alt" style="color: #fa3d8f;"></i> 09622360874<br>
             <i class="fas fa-envelope" style="color: #fa3d8f;"></i> raltheagabrielle@gmail.com<br>
             <i class="fas fa-map-marker-alt" style="color: #fa3d8f;"></i> Lipa City, Batangas, Philippines
           </p>
-          <h5 style="color: #fa3d8f; font-family: 'Pacifico', cursive; text-shadow: 2px 2px #fff;">Hit Me Up!</h5>
-          <div class="d-flex">
-            <a href="https://www.instagram.com/althea_gbrll/" target="_blank" class="mx-2 social-icon" style="--icon-color: #fa3d8f;">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/altheagabrielle1104.reyes" target="_blank" class="mx-2 social-icon" style="--icon-color: #fa3d8f;">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -923,6 +904,48 @@ html {
   <p style="margin: 0;">© 2025 Althea Gabrielle Reyes. All rights reserved.</p>
   
 </footer>
+
+<script>
+  // Pause video when the accordion is closed
+const hobbiesAccordion = document.getElementById('hobbiesAccordion');
+hobbiesAccordion.addEventListener('hidden.bs.collapse', function (event) {
+  const video = event.target.querySelector('video');
+  if (video) {
+    video.pause();
+    video.currentTime = 0; // Reset the video to the beginning
+  }
+});
+</script>
+
+<script>
+  // Scroll to the expanded accordion item with offset for the navbar
+const accordion = document.getElementById('hobbiesAccordion');
+accordion.addEventListener('shown.bs.collapse', function (event) {
+  const expandedItem = event.target;
+  const navbarHeight = document.querySelector('.navbar').offsetHeight; // Get the navbar height
+  const offsetTop = expandedItem.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+  window.scrollTo({
+    top: offsetTop,
+    behavior: 'smooth',
+  });
+});
+</script>
+
+<script>
+  // Ensure only one audio plays at a time
+  const audioPlayers = document.querySelectorAll('.audio-player');
+
+  audioPlayers.forEach((audio) => {
+    audio.addEventListener('play', () => {
+      audioPlayers.forEach((otherAudio) => {
+        if (otherAudio !== audio) {
+          otherAudio.pause();
+        }
+      });
+    });
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
