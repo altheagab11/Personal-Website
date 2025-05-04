@@ -929,6 +929,17 @@ html {
 </footer>
 
 <script>
+  // Stop audio when the accordion is closed
+  hobbiesAccordion.addEventListener('hidden.bs.collapse', function (event) {
+    const audioPlayers = event.target.querySelectorAll('.audio-player');
+    audioPlayers.forEach((audio) => {
+      audio.pause(); // Pause the audio
+      audio.currentTime = 0; // Reset the audio to the beginning
+    });
+  });
+</script>
+
+<script>
   // Pause video when the accordion is closed
 const hobbiesAccordion = document.getElementById('hobbiesAccordion');
 hobbiesAccordion.addEventListener('hidden.bs.collapse', function (event) {
