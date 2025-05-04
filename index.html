@@ -17,8 +17,6 @@
             crossorigin="anonymous"
         />
 
-
-
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
@@ -409,9 +407,24 @@ html {
     }
 
     /* Custom class for SweetAlert popup */
-  .rounded-swal {
-    border-radius: 20px !important; /* Adjust the value for desired roundness */
+.rounded-swal {
+  border-radius: 20px !important; /* Adjust the value for desired roundness */
+}
+
+/* Responsive SweetAlert */
+@media (max-width: 768px) {
+  .swal2-popup.responsive-swal {
+    width: 90% !important; /* Adjust width for smaller screens */
+    font-size: 0.9rem; /* Adjust font size */
   }
+}
+
+@media (max-width: 576px) {
+  .swal2-popup.responsive-swal {
+    width: 95% !important; /* Further adjust width for very small screens */
+    font-size: 0.8rem; /* Further adjust font size */
+  }
+}
 
   /* Ensure all hobby images are the same size */
   .hobby-image {
@@ -495,10 +508,10 @@ html {
             Welcome, Sweetie!
           </h1>
           <p class="fs-4" style="color: #630d99;">
-            I’m <span style="background: linear-gradient(90deg, #ff46b5, #554fff); background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">Althea Gabrielle Reyes</span> — matcha enthusiast, certified code crybaby, and your local Scorpio techie with a flair for the dramatic 💅🦂
+            I’m <span style="background: linear-gradient(90deg, #ff46b5, #554fff); background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">Althea Gabrielle Reyes</span> — a passionate web developer, tech enthusiast, and creative mind dedicated to crafting visually stunning and user-friendly websites (and occasionally breaking them in the process).
           </p>
           <p class="fs-5" style="color: #7b1fa2;">
-            This is my little digital corner where I slay bugs (sometimes), chase deadlines (always), and sprinkle a little sparkle in between ✨ So grab a cup of matcha and enjoy the chaos!
+            Welcome to my personal website, where I showcase my skills, projects, and hobbies. Dive in to explore my journey in tech, my love for design, and the little things that inspire me every day. Warning: May contain excessive sparkle ✨ and a touch of chaos. Let’s connect and create something amazing together!
           </p>
           <a class="btn btn-primary btn-lg sparkle-button mt-3" href="#about" role="button" style="background-color: #fa3d8f; border: none; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6); margin-bottom: 30px;">
             Let’s Get Into It 💫
@@ -528,15 +541,15 @@ html {
         <div class="col-md-6 text-start col-sm-12">
           <blockquote class="blockquote" style="font-size: 1.2rem; color: #6a1b9a;">
 
-            <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
+            <h2 class="text-center mb-4 mt-2" style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #fa3d8f; text-shadow: 2px 2px #fff;">
               About Me
             </h2>
 
             <p class="fs-4" style="text-align: center;">
-              Hey, I’m Althea! 20, born on 11.11 (Scorpio alert ♏), matcha addict, and introvert with a flair for dramatic coding breakdowns.  
-              Currently navigating the stormy seas of I.T. life — where I cry over bugs and contemplate my MedTech villain origin story 🧬💻  
-              I overthink like it’s an Olympic sport, but I keep slaying anyway. If it’s not perfect, I don’t want it — classic Scorpio energy 😌✨  
-              One thing’s for sure: I’m not just here to code, I’m here to make it ✨aesthetic✨.
+              Hey, I’m Althea! 20, born on 11.11 (Scorpio alert ♏), matcha lover, and introvert with a knack for turning caffeine into (mostly functional) code.  
+              Currently surviving the chaotic world of I.T. — where I debug like Sherlock Holmes and dream of a world without semicolon errors 🧬💻  
+              Overthinking is my default setting, but I still manage to meet deadlines with a sprinkle of sparkle and a dash of chaos. If it’s not extra, it’s not me 😌✨  
+              One thing’s for sure: I’m not just here to code, I’m here to make it ✨unforgettable✨.
             </p>
 
           </blockquote>
@@ -643,7 +656,7 @@ html {
   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#hobbiesAccordion">
     <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
       I enjoy playing online games and exploring new virtual worlds. My favorite games include RPGs and strategy games.
-      <video controls class="mt-3 hobby-image" style="border-radius: 15px; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+      <video controls class="mt-3 hobby-image w-100" style="border-radius: 15px; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6); height: auto;">
         <source src="video/roblox.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -662,7 +675,7 @@ html {
   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#hobbiesAccordion">
     <div class="accordion-body" style="color: #6a1b9a; background: rgba(255, 240, 245, 0.8); border-radius: 15px;">
       I love binge-watching K-Dramas with heartwarming stories and amazing characters. My current favorite is <em>Love Next Door</em>.
-      <video controls class="mt-3 hobby-image" style="border-radius: 15px; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6);">
+      <video controls class="mt-3 hobby-image w-100" style="border-radius: 15px; box-shadow: 0 0 15px rgba(250, 61, 143, 0.6); height: auto;">
         <source src="video/kdrama.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -861,32 +874,42 @@ html {
 
           <!-- follow section -->
 
-          <section id="social-media" class="py-5 text-center">
+<section id="social-media" class="py-5 text-center">
+  <div class="container" style="background-color: transparent;">
+    <h2 style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ffffff; text-shadow: 2px 2px #6a1b9a;">
+      Follow Me on Social Media
+    </h2>
+    <p style="color: #fff; font-size: 1.2rem; text-shadow: 1px 1px #6a1b9a;">Let's connect and stay in touch!</p>
 
-            <h2 style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ffffff; text-shadow: 2px 2px #6a1b9a;">
-              Follow Me on Social Media
-            </h2>
-            <p style="color: #fff; font-size: 1.2rem; text-shadow: 1px 1px #6a1b9a;">Let's connect and stay in touch!</p>
-          
-            <div class="d-flex justify-content-center mt-4">
-              <a href="https://github.com/altheagab11" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/althea-gabrielle-reyes-0b5205361" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://www.facebook.com/altheagabrielle1104.reyes" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://www.instagram.com/althea_gbrll/" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.tiktok.com/@abcdefgab__" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
-                <i class="fab fa-tiktok"></i>
-              </a>
-              
-            </div>
-          </section>
+    <div class="row justify-content-center mt-4">
+      <div class="col-auto">
+        <a href="https://github.com/altheagab11" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://www.linkedin.com/in/althea-gabrielle-reyes-0b5205361" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://www.facebook.com/altheagabrielle1104.reyes" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://www.instagram.com/althea_gbrll/" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://www.tiktok.com/@abcdefgab__" target="_blank" class="mx-3 social-icon" style="--icon-color: #ffffff;">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
         </div>
 
@@ -950,30 +973,30 @@ accordion.addEventListener('shown.bs.collapse', function (event) {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-  // SweetAlert on form submission
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form from submitting
+// SweetAlert on form submission
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent form from submitting
 
-    // Show success message
-    Swal.fire({
-      title: 'Message Sent!',
-      text: 'Thank you for reaching out. I will get back to you soon! 💌',
-      icon: 'success',
-      confirmButtonText: 'Okay',
-      confirmButtonColor: '#fa3d8f',
-      background: '#ffe6fa',
-      color: '#6a1b9a',
-      backdrop: `
-        rgba(250, 61, 143, 0.2)
-      `,
-      customClass: {
-        popup: 'rounded-swal' // Add a custom class for rounded corners
-      }
-    }).then(() => {
-      // Clear the form inputs after clicking "Okay"
-      document.getElementById('contactForm').reset();
-    });
+  // Show success message
+  Swal.fire({
+    title: 'Message Sent!',
+    text: 'Thank you for reaching out. I will get back to you soon! 💌',
+    icon: 'success',
+    confirmButtonText: 'Okay',
+    confirmButtonColor: '#fa3d8f',
+    background: '#ffe6fa',
+    color: '#6a1b9a',
+    backdrop: `
+      rgba(250, 61, 143, 0.2)
+    `,
+    customClass: {
+      popup: 'rounded-swal responsive-swal' // Add custom classes for styling
+    }
+  }).then(() => {
+    // Clear the form inputs after clicking "Okay"
+    document.getElementById('contactForm').reset();
   });
+});
 </script>
 
         <script>
